@@ -58,6 +58,10 @@ def run_tests():
 
     warmup_exe()  # 첫 실행 준비
 
+    lines.append(time.strftime('%Y년 %m월 %d일 %A %p %I시 %M분 %S초\n'))
+    lines.append(f"총 {case_count}개의 테스트 케이스 실행\n")
+    lines.append("="*40 + "\n\n")
+
     for i in range(1, case_count+1):
         in_path = os.path.join(TESTCASE_DIR, f'input{i}.txt')
         out_path = os.path.join(TESTCASE_DIR, f'output{i}.txt')
